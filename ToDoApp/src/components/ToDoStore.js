@@ -4,7 +4,6 @@ const getInitialState = () => {
     const saved = localStorage.getItem('tasks-storage');
         if(saved){
             try{
-                console.log("check 1:", saved);
                 return JSON.parse(saved);
 
             }catch(error){
@@ -57,10 +56,6 @@ const useTaskStore = create((set) => ({
             return {tasks: allTasks};
         }
     ),
-
-
-
-
 
 }));
     
